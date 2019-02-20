@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Job Board</title>
+    <link rel="stylesheet" href="{{url_for('statoc',filename='css/bulma.min.css')}}"/link>
+    <link rel="stylesheet" href="{{url_for('statoc',filename='css/bulma.app.css')}}"/link>
+    <link rel="stylesheet" href="https://use.fontawesome.com./releases/v5.2.0/css/all.css"/link>
+  </head>
+  <body>
+    <div class="container top">
+      <div class="content">
+        {% block content %}
+        {% endblock %}
+      </div>
+    </div>
+  </body>
+</html>
