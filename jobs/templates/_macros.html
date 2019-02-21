@@ -1,0 +1,24 @@
+{% macro show_job(job)%}
+<div class="card adjust-height">
+  <header class="card-header">
+    <p class="card-header-title">
+    </p>
+  </header>
+  <div class="card-content">
+    <div class="content">
+      <p>
+        <a href ="">{{job['employer_name']}}</a><br>
+        ${{ job['salary']}}<br>
+        {{job['description']}}
+    </div>
+  </div>
+</div>
+{% endmacro %}
+
+{%macro_show_job%}
+<div class="column is-multiline">
+  {% for job in jobs %}
+  <div class="column is-half">
+    {{show_job}}
+  </div>
+  {% endfor %}
