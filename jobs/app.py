@@ -67,4 +67,4 @@ def review(employer_id):
         (review, rating, title, date, status, employer_id), commit=True)
 
         return redirect(url_for("employer.html", employer_id=employer_id))
-    return render_template('Reviews.html', employer_id=employer_id)
+    return render_template('reviews.html', employer_id=employer_id)
