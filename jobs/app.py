@@ -60,11 +60,10 @@ def review(employer_id):
         review = request.form['review']
         rating = request.form['title']
         title = request.form['title']
-        status = request.form['status'] 
+        status = request.form['status']
 
         date = datetime.datetime.now().strftime("%m/%d/%Y")
         execute_sql('INSERT INTO review (review, rating, title, date, status, employer_id) VALUES (?, ?, ?, ?, ?, ?)'
-        (review, rating, title, date, status, employer_id)
-        commit=True)
+        (review, rating, title, date, status, employer_id), commit=True)
         redirect(url_for("employer.html",employer_id=employer_id))
     return render_template('Reviews.html', employer_id=employer_id)
